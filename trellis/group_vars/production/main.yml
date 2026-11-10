@@ -2,18 +2,18 @@
 # configures nginx, PHP, MySQL, SSL and the firewall, so only deploy.yml runs against it. Never run
 # server.yml on production (it refuses to: see vito_managed).
 #
-# The Vito site airypress.com belongs to the isolated user `airypress`, so it lives in
-# /home/airypress/airypress.com. Trellis deploys releases there (releases/, shared/, current) and the
+# The Vito site featherdash.io belongs to the isolated user `featherdash`, so it lives in
+# /home/featherdash/featherdash.io. Trellis deploys releases there (releases/, shared/, current) and the
 # site's web directory in Vito is `current/public`.
 #
-# One-time server setup, done as the `vito` user because `airypress` has no sudo: WP-CLI and Composer
+# One-time server setup, done as the `vito` user because `featherdash` has no sudo: WP-CLI and Composer
 # in /usr/local/bin (Ansible doesn't load Vito's per-user PATH) and a sudoers rule that lets
-# `airypress` run only `service php8.5-fpm reload`, which Trellis does after each deploy.
+# `featherdash` run only `service php8.5-fpm reload`, which Trellis does after each deploy.
 vito_managed: true
 
-web_user: airypress
-web_group: airypress
-www_root: /home/airypress
+web_user: featherdash
+web_group: featherdash
+www_root: /home/featherdash
 
 # Must match the PHP version of the Vito site (Trellis reloads php{{ php_version }}-fpm after a deploy).
 php_version: "8.5"

@@ -18,9 +18,9 @@
             "url": "https://repo.wp-packages.org"
         },
         {
-            "name": "airypress",
+            "name": "featherdash",
             "type": "vcs",
-            "url": "https://github.com/digital-brew/airypress"
+            "url": "https://github.com/digital-brew/featherdash"
         },
         {
             "name": "satispress",
@@ -44,7 +44,7 @@
         "blade-ui-kit/blade-icons": "^1.0",
         "composer/installers": "^2.0",
         "digital-brew/advanced-custom-fields-pro": "^6.2",
-        "digital-brew/airypress": "dev-main",
+        "digital-brew/featherdash": "dev-main",
         "digital-brew/runcloud-hub": "^1.4",
         "digital-brew/wp-super-cache": "^3.1",
         "guzzlehttp/guzzle": "^7.0",

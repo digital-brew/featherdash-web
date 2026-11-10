@@ -1,9 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "airypress/hero",
+  "name": "featherdash/hero",
   "title": "Hero",
-  "category": "airypress",
+  "category": "featherdash",
   "icon": "star-filled",
   "description": "Brand-colored opening panel with a centred headline, buttons and a product visual.",
   "textdomain": "radicle",

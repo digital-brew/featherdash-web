@@ -23,7 +23,7 @@
                     <img src="{{ esc_url($logo) }}" alt="{{ wp_strip_all_tags($siteName) }}" class="block h-8 w-auto max-w-[220px] md:h-9">
                 @else
                     <span class="icon-tile size-8 rounded-[0.625rem] bg-brand text-white md:size-9 md:rounded-xl">
-                        <x-icon-airypress class="size-5 md:size-[1.375rem]" aria-hidden="true" />
+                        <x-icon-featherdash class="size-5 md:size-[1.375rem]" aria-hidden="true" />
                     </span>
                     <span class="font-display text-xl font-extrabold tracking-[-0.02em] md:text-2xl">{!! $siteName !!}</span>
                 @endif

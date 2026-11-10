@@ -1,9 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "airypress/intro",
+  "name": "featherdash/intro",
   "title": "Intro",
-  "category": "airypress",
+  "category": "featherdash",
   "icon": "editor-paragraph",
   "description": "Centered eyebrow, statement heading and supporting text.",
   "textdomain": "radicle",

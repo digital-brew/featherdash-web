@@ -2,16 +2,16 @@
 # Documentation: https://roots.io/trellis/docs/wordpress-sites/
 
 wordpress_sites:
-  airypress.com:
+  featherdash.io:
     site_hosts:
-    - canonical: airypress.com
+    - canonical: featherdash.io
       redirects:
-      - www.airypress.com
+      - www.featherdash.io
     local_path: ..
     public_path: public
     upload_path: content/uploads
     branch: main
-    repo: git@github.com:digital-brew/airypress-web.git
+    repo: git@github.com:digital-brew/featherdash-web.git
     multisite:
       enabled: false
     ssl:

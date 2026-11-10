@@ -9,7 +9,7 @@ use Closure;
  */
 class DocsIndex
 {
-    public const OPTION = 'airypress_docs_index';
+    public const OPTION = 'featherdash_docs_index';
 
     /**
      * @return array{title: string, excerpt: string, content: string, hash?: string}

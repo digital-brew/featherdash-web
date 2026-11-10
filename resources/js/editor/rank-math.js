@@ -2,7 +2,7 @@ import { select } from "@wordpress/data";
 import { addFilter } from "@wordpress/hooks";
 
 /**
- * Rank Math analyzes the saved post content, but the `airypress/*` sections are dynamic
+ * Rank Math analyzes the saved post content, but the `featherdash/*` sections are dynamic
  * blocks: their saved markup is an empty comment and the HTML only exists on the frontend.
  * Feed Rank Math the sections' text as HTML with the same structure as the Blade templates
  * (hero heading = h1, section headings = h2, item titles = h3) so its score reflects the page.
@@ -84,20 +84,20 @@ const sections = {
 const sectionsHtml = (blocks) =>
   blocks
     .map((block) => {
-      const render = sections[block.name.replace("airypress/", "")];
-      return block.name.startsWith("airypress/") && render ? render(block.attributes) : "";
+      const render = sections[block.name.replace("featherdash/", "")];
+      return block.name.startsWith("featherdash/") && render ? render(block.attributes) : "";
     })
     .join("\n");
 
-addFilter("rank_math_content", "airypress/landing-sections", (content) => {
+addFilter("rank_math_content", "featherdash/landing-sections", (content) => {
   const blocks = select("core/block-editor").getBlocks();
 
-  if (!blocks.some((block) => block.name.startsWith("airypress/"))) {
+  if (!blocks.some((block) => block.name.startsWith("featherdash/"))) {
     return content;
   }
 
   // Drop the sections' attribute comments so their JSON isn't counted as words.
-  const rest = String(content).replace(/<!-- wp:airypress\/[\s\S]*?\/-->/g, "");
+  const rest = String(content).replace(/<!-- wp:featherdash\/[\s\S]*?\/-->/g, "");
 
   return `${sectionsHtml(blocks)}\n${rest}`;
 });

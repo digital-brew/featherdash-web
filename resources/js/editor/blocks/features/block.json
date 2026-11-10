@@ -1,9 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "airypress/features",
+  "name": "featherdash/features",
   "title": "Features",
-  "category": "airypress",
+  "category": "featherdash",
   "icon": "grid-view",
   "description": "Heading with intro text above a grid of colored feature cards, each with an illustration or image.",
   "textdomain": "radicle",

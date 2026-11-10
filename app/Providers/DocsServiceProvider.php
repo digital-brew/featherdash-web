@@ -43,7 +43,7 @@ class DocsServiceProvider extends ServiceProvider
                 wp_json_encode(sprintf(
                     /* translators: %s: Markdown file name */
                     __(
-                        'This content is synced from %s in the AiryPress repository. Edit the Markdown file instead: changes made here are overwritten by the next docs sync.',
+                        'This content is synced from %s in the Featherdash repository. Edit the Markdown file instead: changes made here are overwritten by the next docs sync.',
                         'radicle',
                     ),
                     $source,

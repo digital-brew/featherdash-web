@@ -1,9 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "airypress/video",
+  "name": "featherdash/video",
   "title": "Video",
-  "category": "airypress",
+  "category": "featherdash",
   "icon": "video-alt3",
   "description": "Dark section: eyebrow, heading and intro, a framed muted loop with a play button that opens the demo in a modal (1080p, with an optional 4K switch), and chapter pills that jump to a moment.",
   "textdomain": "radicle",

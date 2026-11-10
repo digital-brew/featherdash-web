@@ -1,9 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "airypress/story",
+  "name": "featherdash/story",
   "title": "Story",
-  "category": "airypress",
+  "category": "featherdash",
   "icon": "format-quote",
   "description": "Bold statement with a stack of colored pill rows.",
   "textdomain": "radicle",

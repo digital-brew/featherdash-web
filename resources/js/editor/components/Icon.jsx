@@ -1,7 +1,7 @@
 /**
- * Icons shared with Blade (`<x-airy-icon>`), read from resources/images/icons/airy.
+ * Icons shared with Blade (`<x-featherdash-icon>`), read from resources/images/icons/featherdash.
  */
-const files = import.meta.glob("../../../images/icons/airy/*.svg", {
+const files = import.meta.glob("../../../images/icons/featherdash/*.svg", {
   query: "?raw",
   import: "default",
   eager: true,

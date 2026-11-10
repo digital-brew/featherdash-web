@@ -2,15 +2,15 @@
 # Documentation: https://roots.io/trellis/docs/wordpress-sites/
 
 wordpress_sites:
-  airypress.com:
+  featherdash.io:
     site_hosts:
-    - canonical: airypress.test
+    - canonical: featherdash.test
       redirects:
-      - www.airypress.test
+      - www.featherdash.test
     local_path: ..
     public_path: public
     upload_path: content/uploads
-    admin_email: admin@airypress.test
+    admin_email: admin@featherdash.test
     multisite:
       enabled: false
     ssl:

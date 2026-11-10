@@ -7,7 +7,7 @@ return [
     | Freemius Checkout
     |--------------------------------------------------------------------------
     |
-    | The AiryPress product in Freemius, used by the pricing block's buttons
+    | The Featherdash product in Freemius, used by the pricing block's buttons
     | to open the checkout. Both values are public (they ship inside the
     | plugin too); the plan, licences and coupon are set on the block.
     |

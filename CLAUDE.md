@@ -10,7 +10,7 @@ Always read and follow the guidelines in `.ai/guidelines/` before working:
 
 ## Project Overview
 
-Marketing site for **AiryPress** (a WordPress admin theme plugin by DigitalBrew), built on **Radicle** (Roots' WordPress stack):
+Marketing site for **Featherdash** (a WordPress admin theme plugin by DigitalBrew), built on **Radicle** (Roots' WordPress stack):
 - **Backend**: Acorn 6 (Laravel) inside WordPress 7.1, Bedrock layout
 - **Frontend build**: Vite 8 + `@roots/vite-plugin` + `laravel-vite-plugin`
 - **Styling**: Tailwind CSS 4 (design tokens in `resources/css/common/theme.css`, exported to `theme.json` at build)
@@ -20,7 +20,7 @@ Marketing site for **AiryPress** (a WordPress admin theme plugin by DigitalBrew)
 
 ## Local Development
 
-- Local URL: https://airypress.com.test/ (served by **Lerd**, Podman-based; `.lando.yml` is a Radicle leftover and not used)
+- Local URL: https://local.featherdash.io/ (production: https://featherdash.io), served by **Lerd** (Podman-based; `.lando.yml` is a Radicle leftover and not used)
 - PHP 8.5 and Composer come from Lerd (`~/.local/share/lerd/bin`); Node/npm from mise
 - Database host is `lerd-mysql` (see `.env`)
 
@@ -77,7 +77,7 @@ Playwright E2E specs live in `tests/e2e/` (`npx playwright test`, set `WP_HOME`)
 
 Custom blocks are dynamic: attributes are edited in React, markup is rendered by Blade.
 
-### Landing page sections (`airypress/*`) — preferred pattern
+### Landing page sections (`featherdash/*`) — preferred pattern
 
 Each section lives in `resources/js/editor/blocks/<slug>/`:
 - `block.json` — **single source** of name, attributes and defaults, read by both PHP and JS. Give every attribute a default (Blade expects every variable to exist), but keep content defaults empty: new blocks start blank with placeholders, the copy lives in the pattern.
@@ -88,8 +88,8 @@ Each section lives in `resources/js/editor/blocks/<slug>/`:
 Rendering: `BlocksServiceProvider` registers every `block.json` with `App\Blocks\Section`, which renders `resources/views/blocks/<slug>.blade.php`. Attributes arrive as variables, already passed through `wp_kses_post` (so `{!! $heading !!}` is safe; still use `esc_url()` on URLs). `$wrapper('classes')` outputs the block wrapper attributes plus the `anchor` id.
 
 - Colors: every section has a `colors` object attribute. `App\Blocks\Section` turns it into CSS variables on the wrapper (`bg` → `--c-bg`), and templates read them with the design token as fallback: `bg-[var(--c-card-bg,var(--color-sky))]`. Unset colors store nothing, so blocks follow the design. Repeated items with different looks (feature cards, featured plans, story rows) set per-item variables (`--card-bg`, `--row-bg`…) inline and share one set of classes. Keep JSX and Blade class strings identical.
-- Images: anywhere a visual lives (hero visual, feature card illustrations, video poster, card icons) there is an upload; when empty the built-in mockup/illustration shows. Card icons store `iconId`; `<x-card-icon :item>` falls back to the bundled SVG named in `icon` (`resources/images/icons/airy/`, two-tone 48px illustrations), rendered in the editor by `IconUpload`.
-- Pattern: `resources/patterns/landing.php` holds the full landing page copy, registered as the `airypress/landing` block pattern
+- Images: anywhere a visual lives (hero visual, feature card illustrations, video poster, card icons) there is an upload; when empty the built-in mockup/illustration shows. Card icons store `iconId`; `<x-card-icon :item>` falls back to the bundled SVG named in `icon` (`resources/images/icons/featherdash/`, two-tone 48px illustrations), rendered in the editor by `IconUpload`.
+- Pattern: `resources/patterns/landing.php` holds the full landing page copy, registered as the `featherdash/landing` block pattern
 - Landing pages use `front-page.blade.php` or the "Landing Page" template (`template-landing.blade.php`), which render full-width without the default container
 
 ### Radicle-style blocks (`radicle/*`)
@@ -106,7 +106,7 @@ Rendering: `BlocksServiceProvider` registers every `block.json` with `App\Blocks
 
 ## Docs (synced from Markdown)
 
-The `doc` post type (`config/post-types.php`, archive at `/docs/`) is filled from the AiryPress plugin's Markdown docs by:
+The `doc` post type (`config/post-types.php`, archive at `/docs/`) is filled from the Featherdash plugin's Markdown docs by:
 
 ```bash
 wp acorn docs:sync              # create/update changed docs (idempotent)
@@ -116,8 +116,8 @@ wp acorn docs:sync --prune      # also unpublish docs whose .md file was removed
 wp acorn docs:sync --source=/path/to/docs --changelog=/path/to/CHANGELOG.md
 ```
 
-- Sources: `config/docs.php` (`DOCS_PATH`, `DOCS_CHANGELOG`; defaults to `public/content/plugins/airypress/docs` and its `CHANGELOG.md`). Production needs these files present (the WordPress.org build may not ship `docs/`), so point the env vars at a checkout and run the sync on deploy.
-- `README.md` is the docs home: shown at `/docs/` (stored in the `airypress_docs_index` option) and its link order sets each doc's `menu_order`. `CHANGELOG.md` becomes the `changelog` Page (template `template-docs.blade.php`).
+- Sources: `config/docs.php` (`DOCS_PATH`, `DOCS_CHANGELOG`; defaults to `public/content/plugins/featherdash/docs` and its `CHANGELOG.md`). Production needs these files present (the WordPress.org build may not ship `docs/`), so point the env vars at a checkout and run the sync on deploy.
+- `README.md` is the docs home: shown at `/docs/` (stored in the `featherdash_docs_index` option) and its link order sets each doc's `menu_order`. `CHANGELOG.md` becomes the `changelog` Page (template `template-docs.blade.php`).
 - Each `*.md` becomes one doc (slug = file name). First `# Heading` → title, first paragraph → excerpt (and the Rank Math description), the rest → core blocks via `App\Docs\MarkdownToBlocks` + `BlockMarkup`. Relative `*.md` links point to the matching doc/archive/changelog URL; headings get ids so `file.md#section` links work. Bump `MarkdownToBlocks::VERSION` when the generated markup changes so the next sync rewrites everything.
 - Posts are matched by `_docs_source` meta (file name) and skipped while `_docs_hash` matches. Edits made in WordPress are overwritten on the next sync (the editor shows a warning); change the Markdown in the plugin repo instead.
 - Don't name a command option `--path`: WP-CLI swallows it (global WordPress path option).
@@ -140,9 +140,9 @@ wp acorn docs:sync --source=/path/to/docs --changelog=/path/to/CHANGELOG.md
 ## Quirks & Gotchas
 
 - **No `theme.json` element styles or root padding.** WordPress prints them as unlayered CSS, which beats Tailwind's layered utilities. Element defaults (headings, p, lists) live in `resources/css/common/base.css`; `resources/views/blocks/_global.theme.js` holds only block styles.
-- **The editor may not be iframed.** Plugins registering pre-v3 blocks (AIOSEO, Advanced Forms) make WordPress render the canvas inline, so wp-admin CSS leaks in. That's why `editor.css` imports Tailwind with `important` and resets typography inside `[data-type^="airypress/"]`.
+- **The editor may not be iframed.** Plugins registering pre-v3 blocks (AIOSEO, Advanced Forms) make WordPress render the canvas inline, so wp-admin CSS leaks in. That's why `editor.css` imports Tailwind with `important` and resets typography inside `[data-type^="featherdash/"]`.
 - **Composer autoload order.** Some plugins bundle unprefixed copies of shared libraries (AIOSEO Pro shipped Monolog 1 / PSR Log 1 and crashed Acorn on its first log write). `public/content/mu-plugins/composer-autoload-priority.php` re-prepends the project autoloader after each plugin loads so our versions always win. The free AIOSEO now in use doesn't bundle them, but keep the mu-plugin as a guard.
-- The AiryPress plugin is required as `digital-brew/airypress:dev-main` from its private GitHub repo (`vcs` repository, authenticated by the `github-oauth` token in `auth.json`). Locally, `public/content/plugins/airypress` is swapped for a symlink to `~/Projects/Code/wp-plugins/airypress`; `composer install`/`update` replaces the symlink, so re-create it afterwards. Run `composer update digital-brew/airypress` to deploy new plugin commits.
+- The Featherdash plugin is required as `digital-brew/featherdash:dev-main` from its private GitHub repo (`vcs` repository, authenticated by the `github-oauth` token in `auth.json`). Locally (since 2026-11-05), `public/content/plugins/featherdash` is a copy of the **free** build (unzipped from the Freemius free zip, also served at `public/download/featherdash.zip`) instead of the repo symlink; `composer install`/`update` replaces it with the git version, so unzip the free zip again afterwards. Run `composer update digital-brew/featherdash` to deploy new plugin commits.
 
 - `vendor/`, `public/wp/`, `public/content/plugins/*`, `public/build/` are build artifacts — never edit them.
 - Composer network access may need to run outside Claude's sandbox (sandbox DNS blocks `codeload.github.com`).

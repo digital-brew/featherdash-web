@@ -25,7 +25,7 @@ class BlocksServiceProvider extends ServiceProvider
          * Group the landing page section blocks under their own inserter category
          */
         add_filter('block_categories_all', fn (array $categories): array => [
-            ['slug' => 'airypress', 'title' => __('AiryPress', 'radicle')],
+            ['slug' => 'featherdash', 'title' => __('Featherdash', 'radicle')],
             ...$categories,
         ]);
 
@@ -49,7 +49,7 @@ class BlocksServiceProvider extends ServiceProvider
             ]);
 
             /**
-             * Register the `airypress/*` landing page sections from their block.json files
+             * Register the `featherdash/*` landing page sections from their block.json files
              */
             foreach (glob(resource_path('js/editor/blocks/*/block.json')) as $metadata) {
                 register_block_type(dirname($metadata), [
@@ -60,16 +60,16 @@ class BlocksServiceProvider extends ServiceProvider
             /**
              * One-click pattern with every section and the launch copy
              */
-            register_block_pattern_category('airypress', ['label' => __('AiryPress', 'radicle')]);
+            register_block_pattern_category('featherdash', ['label' => __('Featherdash', 'radicle')]);
 
-            register_block_pattern('airypress/landing', [
-                'title' => __('AiryPress landing page', 'radicle'),
-                'categories' => ['airypress'],
+            register_block_pattern('featherdash/landing', [
+                'title' => __('Featherdash landing page', 'radicle'),
+                'categories' => ['featherdash'],
                 'blockTypes' => ['core/post-content'],
                 'content' => serialize_blocks(
                     collect(require resource_path('patterns/landing.php'))
                         ->map(fn (array $attributes, string $slug): array => [
-                            'blockName' => "airypress/{$slug}",
+                            'blockName' => "featherdash/{$slug}",
                             'attrs' => $attributes,
                             'innerBlocks' => [],
                             'innerHTML' => '',

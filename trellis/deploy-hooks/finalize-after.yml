@@ -1,4 +1,4 @@
-# Refresh the docs from the AiryPress plugin's Markdown (installed by Composer). Only changed files
+# Refresh the docs from the Featherdash plugin's Markdown (installed by Composer). Only changed files
 # are rewritten, and docs whose file was removed are unpublished.
 - name: Sync docs
   command: wp acorn docs:sync --prune

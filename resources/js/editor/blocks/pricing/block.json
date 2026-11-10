@@ -1,9 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "airypress/pricing",
+  "name": "featherdash/pricing",
   "title": "Pricing",
-  "category": "airypress",
+  "category": "featherdash",
   "icon": "money-alt",
   "description": "Pricing plans with a yearly / lifetime toggle.",
   "textdomain": "radicle",

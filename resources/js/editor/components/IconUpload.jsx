@@ -5,7 +5,7 @@ import { useMediaUrl } from "./MediaField";
 
 /**
  * Icon tile that opens the media library. Shows the uploaded image, or the item's
- * bundled illustration (`fallback`, a name in resources/images/icons/airy) when none is set.
+ * bundled illustration (`fallback`, a name in resources/images/icons/featherdash) when none is set.
  */
 export const IconUpload = ({ value, onChange, fallback, className, size }) => {
   const url = useMediaUrl(value);

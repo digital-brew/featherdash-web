@@ -1,9 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "airypress/highlights",
+  "name": "featherdash/highlights",
   "title": "Highlights",
-  "category": "airypress",
+  "category": "featherdash",
   "icon": "screenoptions",
   "description": "Row of icon cards with a short title and line of text.",
   "textdomain": "radicle",

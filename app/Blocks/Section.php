@@ -6,7 +6,7 @@ use Illuminate\Support\Str;
 use WP_Block;
 
 /**
- * Renders the landing page section blocks (`airypress/*`) with `resources/views/blocks/{slug}.blade.php`.
+ * Renders the landing page section blocks (`featherdash/*`) with `resources/views/blocks/{slug}.blade.php`.
  */
 class Section
 {

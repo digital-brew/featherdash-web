@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "342a0c4e95a3c588aea161e919f24956",
+    "content-hash": "7df60156ebda97488719f5d33288d141",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -533,17 +533,17 @@
             "homepage": "https://www.advancedcustomfields.com"
         },
         {
-            "name": "digital-brew/airypress",
+            "name": "digital-brew/featherdash",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "git@github.com:digital-brew/airypress.git",
-                "reference": "b5d69945b98a0e15ca047abeafc7b94dce5eeedf"
+                "url": "git@github.com:digital-brew/featherdash.git",
+                "reference": "a4781bc47487fddc8509f68a1f52b106b4e96daf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/digital-brew/airypress/zipball/b5d69945b98a0e15ca047abeafc7b94dce5eeedf",
-                "reference": "b5d69945b98a0e15ca047abeafc7b94dce5eeedf",
+                "url": "https://api.github.com/repos/digital-brew/featherdash/zipball/a4781bc47487fddc8509f68a1f52b106b4e96daf",
+                "reference": "a4781bc47487fddc8509f68a1f52b106b4e96daf",
                 "shasum": ""
             },
             "require": {
@@ -554,7 +554,7 @@
             "type": "wordpress-plugin",
             "autoload": {
                 "psr-4": {
-                    "DigitalBrew\\AiryPress\\": "src/"
+                    "DigitalBrew\\Featherdash\\": "src/"
                 }
             },
             "authors": [
@@ -572,10 +572,10 @@
                 "wordpress"
             ],
             "support": {
-                "source": "https://github.com/digital-brew/airypress/tree/main",
-                "issues": "https://github.com/digital-brew/airypress/issues"
+                "source": "https://github.com/digital-brew/featherdash/tree/main",
+                "issues": "https://github.com/digital-brew/featherdash/issues"
             },
-            "time": "2026-10-12T07:05:12+00:00"
+            "time": "2026-11-06T11:19:43+00:00"
         },
         {
             "name": "digital-brew/runcloud-hub",
@@ -12267,7 +12267,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "digital-brew/airypress": 20
+        "digital-brew/featherdash": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

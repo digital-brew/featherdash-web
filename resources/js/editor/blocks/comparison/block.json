@@ -1,9 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "airypress/comparison",
+  "name": "featherdash/comparison",
   "title": "Comparison",
-  "category": "airypress",
+  "category": "featherdash",
   "icon": "editor-table",
   "description": "Comparison table with highlighted first column, chips and a tested-with list.",
   "textdomain": "radicle",

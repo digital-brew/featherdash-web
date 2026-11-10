@@ -2,14 +2,14 @@
 # Documentation: https://roots.io/trellis/docs/wordpress-sites/
 
 wordpress_sites:
-  airypress.com:
+  featherdash.io:
     site_hosts:
-      - canonical: airypress.com
+      - canonical: featherdash.io
     local_path: ..
     public_path: public
     upload_path: content/uploads
     branch: main
-    repo: git@github.com:digital-brew/airypress-web.git
+    repo: git@github.com:digital-brew/featherdash-web.git
     multisite:
       enabled: false
     # Vito issues and renews the certificate; enabled here so WP_HOME/WP_SITEURL use https.
@@ -20,6 +20,6 @@ wordpress_sites:
       enabled: false
     # The database and its user are created in Vito (Databases); the password is in vault.yml.
     env:
-      db_name: airypress_prod
-      db_user: airypress
+      db_name: featherdash_prod
+      db_user: featherdash
       db_prefix: dbio_

@@ -1,9 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "airypress/faq",
+  "name": "featherdash/faq",
   "title": "FAQ",
-  "category": "airypress",
+  "category": "featherdash",
   "icon": "editor-help",
   "description": "Accordion of frequently asked questions.",
   "textdomain": "radicle",

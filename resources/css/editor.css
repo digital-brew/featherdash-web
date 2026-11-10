@@ -25,7 +25,7 @@ ol {
 }
 
 /* Landing blocks are full-bleed sections; drop the editor's default block margins */
-.editor-styles-wrapper [data-type^="airypress/"] {
+.editor-styles-wrapper [data-type^="featherdash/"] {
   margin-block: 0;
   max-width: none;
   font-family: var(--font-sans);
@@ -35,7 +35,7 @@ ol {
 }
 
 /* Undo wp-admin heading/paragraph styles inside the sections (non-iframed editor) */
-.editor-styles-wrapper [data-type^="airypress/"] :is(h1, h2, h3, p, blockquote, figure) {
+.editor-styles-wrapper [data-type^="featherdash/"] :is(h1, h2, h3, p, blockquote, figure) {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;

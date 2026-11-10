@@ -29,7 +29,7 @@
     owner: no
     rsync_opts: --chmod=Du=rwx,--chmod=Dg=rx,--chmod=Do=rx,--chmod=Fu=rw,--chmod=Fg=r,--chmod=Fo=r
 
-# Private Composer repositories (SatisPress, Freemius, the AiryPress GitHub repo): the release gets
+# Private Composer repositories (SatisPress, Freemius, the Featherdash GitHub repo): the release gets
 # the project's local, gitignored auth.json, so the credentials live in one place.
 - name: Copy Composer credentials
   copy:

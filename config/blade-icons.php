@@ -7,9 +7,9 @@ return [
             'prefix' => 'icon',
         ],
 
-        'airy' => [
-            'path' => 'resources/images/icons/airy',
-            'prefix' => 'airy',
+        'featherdash' => [
+            'path' => 'resources/images/icons/featherdash',
+            'prefix' => 'featherdash',
         ],
     ],
 ];

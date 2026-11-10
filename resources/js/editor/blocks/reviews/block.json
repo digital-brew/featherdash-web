@@ -1,9 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "airypress/reviews",
+  "name": "featherdash/reviews",
   "title": "Reviews",
-  "category": "airypress",
+  "category": "featherdash",
   "icon": "testimonial",
   "description": "Grid of review cards.",
   "textdomain": "radicle",

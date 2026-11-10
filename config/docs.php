@@ -13,10 +13,10 @@ return [
     |
     */
 
-    'path' => env('DOCS_PATH', public_path('content/plugins/airypress/docs')),
+    'path' => env('DOCS_PATH', public_path('content/plugins/featherdash/docs')),
 
     'index' => 'README.md',
 
-    'changelog' => env('DOCS_CHANGELOG', public_path('content/plugins/airypress/CHANGELOG.md')),
+    'changelog' => env('DOCS_CHANGELOG', public_path('content/plugins/featherdash/CHANGELOG.md')),
 
 ];
