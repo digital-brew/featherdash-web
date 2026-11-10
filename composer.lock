@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7df60156ebda97488719f5d33288d141",
+    "content-hash": "2648d3ff59c3223c2b7b40ea3e27be24",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -513,11 +513,11 @@
         },
         {
             "name": "digital-brew/advanced-custom-fields-pro",
-            "version": "6.8.10",
+            "version": "6.8.11",
             "dist": {
                 "type": "zip",
-                "url": "https://satispress.digitalbrew.io/satispress/advanced-custom-fields-pro/6.8.10",
-                "shasum": "f7be6a0aabbe3e6ddbddb0827161c5e4ee969a1f"
+                "url": "https://satispress.digitalbrew.io/satispress/advanced-custom-fields-pro/6.8.11",
+                "shasum": "faeed0dffae72f82375dc6b888e41f38c7bf4cd6"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -538,12 +538,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:digital-brew/featherdash.git",
-                "reference": "a4781bc47487fddc8509f68a1f52b106b4e96daf"
+                "reference": "1a03859de383cdb8715d2e0797c23fc0afdb7bd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/digital-brew/featherdash/zipball/a4781bc47487fddc8509f68a1f52b106b4e96daf",
-                "reference": "a4781bc47487fddc8509f68a1f52b106b4e96daf",
+                "url": "https://api.github.com/repos/digital-brew/featherdash/zipball/1a03859de383cdb8715d2e0797c23fc0afdb7bd6",
+                "reference": "1a03859de383cdb8715d2e0797c23fc0afdb7bd6",
                 "shasum": ""
             },
             "require": {
@@ -575,48 +575,7 @@
                 "source": "https://github.com/digital-brew/featherdash/tree/main",
                 "issues": "https://github.com/digital-brew/featherdash/issues"
             },
-            "time": "2026-11-06T11:19:43+00:00"
-        },
-        {
-            "name": "digital-brew/runcloud-hub",
-            "version": "1.4.10",
-            "dist": {
-                "type": "zip",
-                "url": "https://satispress.digitalbrew.io/satispress/runcloud-hub/1.4.10",
-                "shasum": "c7ae158aed07e941f7cf9883e244fd5b281ee1f1"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": [
-                {
-                    "name": "RunCloud",
-                    "homepage": "https://runcloud.io/"
-                }
-            ],
-            "description": "RunCloud server-side caching for WordPress, Nginx FastCGI/Proxy Cache and Redis Object Cache"
-        },
-        {
-            "name": "digital-brew/wp-super-cache",
-            "version": "3.1.4",
-            "dist": {
-                "type": "zip",
-                "url": "https://satispress.digitalbrew.io/satispress/wp-super-cache/3.1.4",
-                "shasum": "ada5fc13be72c13be1d3e2b5db2061611d96be27"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": [
-                {
-                    "name": "Automattic",
-                    "homepage": "https://automattic.com/"
-                }
-            ],
-            "description": "Very fast caching plugin for WordPress.",
-            "homepage": "https://wordpress.org/plugins/wp-super-cache/"
+            "time": "2026-11-10T12:27:37+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -6330,63 +6289,6 @@
             "time": "2018-08-10T14:18:38+00:00"
         },
         {
-            "name": "roots/wp-stage-switcher",
-            "version": "2.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/roots/wp-stage-switcher.git",
-                "reference": "a3879a18a99f7f1f658d489ce3d2920887b93adb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/roots/wp-stage-switcher/zipball/a3879a18a99f7f1f658d489ce3d2920887b93adb",
-                "reference": "a3879a18a99f7f1f658d489ce3d2920887b93adb",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0 || ~2.0",
-                "php": ">=8.2"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.20",
-                "pestphp/pest": "^2.36 || ^3.0 || ^4.0"
-            },
-            "type": "wordpress-plugin",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ben Word",
-                    "email": "ben@benword.com",
-                    "homepage": "https://github.com/retlehs"
-                },
-                {
-                    "name": "Scott Walkinshaw",
-                    "email": "scott.walkinshaw@gmail.com",
-                    "homepage": "https://github.com/swalkinshaw"
-                }
-            ],
-            "description": "WordPress plugin that allows you to switch between different environments from the admin bar",
-            "homepage": "https://roots.io/plugin/stage-switcher/",
-            "keywords": [
-                "wordpress"
-            ],
-            "support": {
-                "forum": "https://discourse.roots.io",
-                "issues": "https://github.com/roots/wp-stage-switcher/issues",
-                "source": "https://github.com/roots/wp-stage-switcher/tree/2.4.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/roots",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-04-26T23:02:21+00:00"
-        },
-        {
             "name": "stoutlogic/acf-builder",
             "version": "v1.12.0",
             "source": {
@@ -8789,7 +8691,7 @@
                 "issues": "https://wordpress.org/support/plugin/acf-extended",
                 "source": "https://plugins.svn.wordpress.org/acf-extended"
             },
-            "time": "2026-10-19T13:26:02+00:00"
+            "time": "2026-10-19T13:23:29+00:00"
         },
         {
             "name": "wp-plugin/advanced-forms",
@@ -8820,19 +8722,19 @@
                 "issues": "https://wordpress.org/support/plugin/advanced-forms",
                 "source": "https://plugins.svn.wordpress.org/advanced-forms"
             },
-            "time": "2026-05-11T10:20:57+00:00"
+            "time": "2026-09-29T13:03:58+00:00"
         },
         {
             "name": "wp-plugin/klaviyo",
-            "version": "3.8.3",
+            "version": "3.9.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/klaviyo/",
-                "reference": "tags/3.8.3"
+                "reference": "tags/3.9.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/klaviyo.3.8.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/klaviyo.3.9.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0|~2.0"
@@ -8851,19 +8753,19 @@
                 "issues": "https://wordpress.org/support/plugin/klaviyo",
                 "source": "https://plugins.svn.wordpress.org/klaviyo"
             },
-            "time": "2026-09-08T15:01:22+00:00"
+            "time": "2026-10-28T15:03:36+00:00"
         },
         {
             "name": "wp-plugin/seo-by-rank-math",
-            "version": "1.0.280",
+            "version": "1.0.282",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/seo-by-rank-math/",
-                "reference": "tags/1.0.280"
+                "reference": "tags/1.0.282"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/seo-by-rank-math.1.0.280.zip"
+                "url": "https://downloads.wordpress.org/plugin/seo-by-rank-math.1.0.282.zip"
             },
             "require": {
                 "composer/installers": "~1.0|~2.0"
@@ -8882,7 +8784,7 @@
                 "issues": "https://wordpress.org/support/plugin/seo-by-rank-math",
                 "source": "https://plugins.svn.wordpress.org/seo-by-rank-math"
             },
-            "time": "2026-10-06T12:47:14+00:00"
+            "time": "2026-11-10T11:01:56+00:00"
         }
     ],
     "packages-dev": [
@@ -9424,75 +9326,6 @@
                 "source": "https://github.com/Jean85/pretty-package-versions/tree/2.1.1"
             },
             "time": "2025-03-19T14:43:43+00:00"
-        },
-        {
-            "name": "johnbillion/query-monitor",
-            "version": "4.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/johnbillion/query-monitor.git",
-                "reference": "e53a8172c8e24da8c44ebe0fde864b71ea3bb90a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/johnbillion/query-monitor/zipball/e53a8172c8e24da8c44ebe0fde864b71ea3bb90a",
-                "reference": "e53a8172c8e24da8c44ebe0fde864b71ea3bb90a",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0",
-                "php": ">=7.4.0"
-            },
-            "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "0.7.2",
-                "guzzlehttp/guzzle": "^7.0",
-                "johnbillion/plugin-infrastructure": "2.9.9",
-                "johnbillion/wp-compat": "3.0.1",
-                "php-stubs/wordpress-stubs": "7.1.0",
-                "phpcompatibility/phpcompatibility-wp": "2.1.8",
-                "phpstan/phpstan": "2.1.46",
-                "phpstan/phpstan-deprecation-rules": "2.0.4",
-                "phpstan/phpstan-phpunit": "2.0.16",
-                "squizlabs/php_codesniffer": "3.13.6",
-                "szepeviktor/phpstan-wordpress": "2.0.4",
-                "wp-coding-standards/wpcs": "3.4.1"
-            },
-            "type": "wordpress-plugin",
-            "extra": {
-                "wordpress-install-dir": "vendor/wordpress/wordpress"
-            },
-            "autoload": {
-                "classmap": [
-                    "classes",
-                    "data",
-                    "output"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "John Blackbourn",
-                    "homepage": "https://johnblackbourn.com/"
-                }
-            ],
-            "description": "Query Monitor is the developer tools panel for WordPress and WooCommerce.",
-            "homepage": "https://querymonitor.com/",
-            "support": {
-                "forum": "https://wordpress.org/support/plugin/query-monitor",
-                "issues": "https://github.com/johnbillion/query-monitor/issues",
-                "security": "https://querymonitor.com/security/",
-                "source": "https://github.com/johnbillion/query-monitor"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/johnbillion",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-10-27T01:18:32+00:00"
         },
         {
             "name": "myclabs/deep-copy",

@@ -45,8 +45,6 @@
         "composer/installers": "^2.0",
         "digital-brew/advanced-custom-fields-pro": "^6.2",
         "digital-brew/featherdash": "dev-main",
-        "digital-brew/runcloud-hub": "^1.4",
-        "digital-brew/wp-super-cache": "^3.1",
         "guzzlehttp/guzzle": "^7.0",
         "league/commonmark": "^2.7",
         "log1x/acf-composer": "^3.2",
@@ -64,7 +62,6 @@
         "roots/bedrock-disallow-indexing": "^2.0",
         "roots/wordpress": "7.1.3",
         "roots/wp-config": "^1.0",
-        "roots/wp-stage-switcher": "^2.0",
         "vlucas/phpdotenv": "^5.0",
         "wp-plugin/acf-extended": "^0.9.0",
         "wp-plugin/advanced-forms": "^1.9",
@@ -73,7 +70,6 @@
     },
     "require-dev": {
         "carthage-software/mago": "^1.0",
-        "johnbillion/query-monitor": "^4.0",
         "pestphp/pest": "^4.0",
         "phpcompatibility/php-compatibility": "^9.0"
     },
@@ -101,7 +97,8 @@
         },
         "installer-paths": {
             "public/content/mu-plugins/{$name}/": [
-                "type:wordpress-muplugin"
+                "type:wordpress-muplugin",
+                "roots/allow-svg"
             ],
             "public/content/plugins/{$name}/": [
                 "type:wordpress-plugin"
