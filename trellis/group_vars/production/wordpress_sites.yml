@@ -21,5 +21,5 @@ wordpress_sites:
     # The database and its user are created in Vito (Databases); the password is in vault.yml.
     env:
       db_name: featherdash_prod
-      db_user: featherdash
+      db_user: featherdash_prod
       db_prefix: dbio_
